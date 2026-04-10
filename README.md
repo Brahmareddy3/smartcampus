@@ -6,14 +6,14 @@
 ![JWT](https://img.shields.io/badge/JWT-Auth-red)
 
 ## 📌 About
-SmartCampus is a real-time, AI-powered College ERP System built with Spring Boot. It enables QR-based attendance, real-time notifications, and AI performance prediction.
+SmartCampus is a real-time, AI-powered College ERP System built with Spring Boot.
 
 ## 🚀 Features
-- ✅ JWT Authentication with Role-based Access (Student, Faculty, Admin)
-- ✅ QR Code Attendance System (expires in 60 seconds)
-- ✅ Real-time Notifications via WebSocket
-- ✅ AI Performance Predictor (Pass/Fail prediction)
-- ✅ Analytics Dashboard (Subject-wise, Top Students)
+- ✅ JWT Authentication (Student, Faculty, Admin)
+- ✅ QR Code Attendance (expires in 60 seconds)
+- ✅ Real-time WebSocket Notifications
+- ✅ AI Performance Predictor
+- ✅ Analytics Dashboard
 
 ## 🛠️ Tech Stack
 | Technology | Usage |
@@ -21,46 +21,26 @@ SmartCampus is a real-time, AI-powered College ERP System built with Spring Boot
 | Java 21 | Programming Language |
 | Spring Boot 3.5.1 | Backend Framework |
 | Spring Security + JWT | Authentication |
-| Spring Data JPA | Database ORM |
 | MySQL 8.0 | Database |
-| WebSocket (STOMP) | Real-time Communication |
+| WebSocket | Real-time Communication |
 | ZXing | QR Code Generation |
-| Gradle | Build Tool |
 
-## ⚙️ Setup Instructions
-
-### Steps
-1. Clone the repository
-git clone https://github.com/Brahmareddy3/smartcampus.git
-
-2. Create MySQL database
-CREATE DATABASE smartcampus;
-
-3. Run the project
-./gradlew bootRun
+## ⚙️ Setup
+1. Clone repo: `git clone https://github.com/Brahmareddy3/smartcampus.git`
+2. Create database: `CREATE DATABASE smartcampus;`
+3. Update password in `application.properties`
+4. Run: `./gradlew bootRun`
 
 ## 📡 API Endpoints
-
-### Auth APIs
 | Method | URL | Description |
 |---|---|---|
-| POST | /api/auth/register | Register user |
-| POST | /api/auth/login | Login & get JWT |
-
-### QR Attendance APIs
-| Method | URL | Description |
-|---|---|---|
-| POST | /api/qr/generate | Generate QR code |
-| POST | /api/attendance/mark | Mark attendance |
-| GET | /api/attendance/student/{email} | Get student attendance |
-
-### AI & Analytics APIs
-| Method | URL | Description |
-|---|---|---|
-| POST | /api/ai/predict | Predict performance |
-| GET | /api/analytics/campus | Campus analytics |
-| GET | /api/analytics/top-students | Top students |
+| POST | /api/auth/register | Register |
+| POST | /api/auth/login | Login |
+| POST | /api/qr/generate | Generate QR |
+| POST | /api/attendance/mark | Mark Attendance |
+| POST | /api/ai/predict | AI Prediction |
+| GET | /api/analytics/campus | Analytics |
 
 ## 👨‍💻 Developer
 **Muttireddy Brahma Reddy**
-- GitHub: [@Brahmareddy3](https://github.com/Brahmareddy3)
+GitHub: [@Brahmareddy3](https://github.com/Brahmareddy3)
