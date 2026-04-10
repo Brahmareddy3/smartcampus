@@ -29,6 +29,8 @@ public class SecurityConfig {
 .requestMatchers("/api/qr/**").permitAll()
 .requestMatchers("/api/attendance/**").permitAll()
 .requestMatchers("/api/report/**").permitAll()
+.requestMatchers("/api/notify/**").permitAll()
+.requestMatchers("/ws/**").permitAll()
                 .anyRequest().authenticated())
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
